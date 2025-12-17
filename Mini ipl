@@ -1,0 +1,442 @@
+#include<stdio.h>
+void Squads(int team){
+    switch(team){
+        case 1:
+            printf("******** RCB BATTERS ********\n\n");
+            printf("1. Virat Kohli\n2. Rajat Patidar (C)\n3. Devdutt Padikal\n4. Mayank Agrawal\n\n");
+            printf("******** RCB ALL ROUNDERS ********\n\n");
+            printf("5. Liam Livingstone (ENG)\n6. Krunal Pandya\n7. Romario Shepherd (WI)\n8. Jacob Bethell (ENG)\n9. Tim David (AUS)\n10. Swapnil Singh\n\n");
+            printf("******** RCB WICKET KEEPERS*********\n\n");
+            printf("11. Phil Salt (ENG)\n12. Jitesh Sharma\n\n");
+            printf("******** RCB BOWLERS ********\n\n");
+            printf("13. Josh Hazlewood (AUS)\n14. Bhuvneshwar Kumar\n15. Lungi Ngidi (SA)\n16. Suyash Sharma\n17. Yash Dayal\n");
+            break;
+
+        case 2:
+            printf("******** CSK BATTERS ********\n\n");
+            printf("1. Ruturaj Gaikwad (C)\n2. Ayush Mhatre\n3. Dewald Brevis (SA)\n4. Rahul Tripathi\n");
+            printf("\n******** CSK ALL ROUNDERS ********\n\n");
+            printf("5. Shivam Dube\n6. Sam Curran (ENG)\n7. Rachin Ravindra (NZ)\n8. Deepak Hooda\n9. Ravindra Jadeja\n10. Ravichandran Ashwin\n11. Vijay Shankar\n");
+            printf("\n******** CSK WICKET KEEPERS ********\n\n");
+            printf("12. M.S.Dhoni\n13. Devon Conway (NZ)\n");
+            printf("\n******** CSK BOWLERS ********\n\n");
+            printf("14. Noor Ahmed (AFG)\n15. Khaleel Ahmed\n16. Matheesha Pathirana (SL)\n17. Nathan Ellis (AUS)\n18. Shreyas Gopal\n");
+            break;
+
+        case 3:
+            printf("\n******** MI BATTERS ********\n\n");
+            printf("1. Rohit Sharma\n2. Suryakumar Yadav\n3. Tilak Verma\n4. Naman Dhir\n");
+            printf("\n******** MI ALL ROUNDERS ********\n\n");
+            printf("5. Hardik Pandya (C)\n6. Mitchell Santner (NZ)\n7. Will Jacks (ENG)\n8. Arjun Tendulkar\n");
+            printf("\n******** MI WICKET KEEPERS ********\n\n");
+            printf("9. Ryan Rickelton (SA)\n10. Jonny Bairstow (ENG)\n");
+            printf("\n******** MI BOWLERS ********\n\n");
+            printf("11. Jasprit Bumrah\n12. Trent Boult (NZ)\n13. Deepak Chahar\n14. Mujeeb Ur Rahman (AFG)\n15. Reece Topley (ENG)\n16. Karn Sharma\n");
+            break;
+
+        case 4:
+            printf("\n******** KKR BATTERS ********\n\n");
+            printf("1. Rinku Singh\n2. Ajinkya Rahane (C)\n3. Manish Pandey\n4. Rovman Powell (WI)\n5. Angkrish Raghuvanshi\n");
+            printf("\n******** KKR ALL ROUNDERS ********\n\n");
+            printf("6. Andre Russell (WI)\n7. Sunil Narine (WI)\n8. Venkatesh Iyer\n9. Ramandeep Singh\n10. Moeen Ali (ENG)\n");
+            printf("\n******** KKR WICKET KEEPERS ********\n\n");
+            printf("11. Quinton De Kock (SA)\n12. Rahmanullah Gurbaz (AFG)\n");
+            printf("\n******** KKR BOWLERS ********\n\n");
+            printf("13. Varun Chakravarthy\n14. Harshit Rana\n15. Vaibhav Arora\n16. Anrich Nortje (SA)\n17. Mayank Markande\n");
+            break;
+
+        case 5:
+            printf("\n******** SRH BATTERS ********\n\n");
+            printf("1. Travis Head (AUS)\n2. Abhinav Manohar\n3. Atharv Taide\n4. Aniket Verma\n5. Sachin Baby\n");
+            printf("\n******** SRH ALL ROUNDERS ********\n\n");
+            printf("6. Nitish Kumar Reddy\n7. Abhishek Sharma\n");
+            printf("\n******** SRH WICKET KEEPERS ********\n\n");
+            printf("8. Henrich Klaasen (SA)\n9. Ishan Kishan\n");
+            printf("\n******** SRH BOWLERS ********\n\n");
+            printf("10. Pat Cummins (AUS) (C)\n11. Mohammad Shami\n12. Rahul Chahar\n13. Simarjeet Singh\n14. Harshal Patel\n15. Jaydev Unadkat\n16. Eshan Malinga (SL)\n");
+            break;
+
+        case 6:
+            printf("\n******** RR BATTERS ********\n\n");
+            printf("1. Yashasvi Jaiswal\n2. Shimron Hetmyer (WI)\n3. Vaibhav Suryavanshi\n");
+            printf("\n******** RR ALL ROUNDERS ********\n\n");
+            printf("4. Riyan Parag\n5. Nitish Rana\n6. Wanindu Hasranga (SL)\n");
+            printf("\n******** RR WICKET KEEPERS ********\n\n");
+            printf("7. Sanju Samson (C)\n8. Dhruv Jurel\n");
+            printf("\n******** RR BOWLERS ********\n\n");
+            printf("9. Jofra Archer (WI)\n10. Maheesh Theekshana (SL)\n11. Sandeep Sharma\n12. Akash Madhwal\n13. Nandre Burger (SA)\n14. Fazalhaq Farooqi (AFG)\n15. Kwena Maphaka (SA)\n");
+            break;
+    }
+}
+
+struct stats {
+    char name[50];
+    int matches;
+    int runs;
+    int fifties;
+    int centuries;
+    float avg;
+    int highest;
+    int wickets;
+    float economy;
+    char bestbowl[10];
+};
+struct stats RCB[17] = {
+    {"Virat Kohli", 267, 8661, 63, 8, 39.55, 113, 4, 8.80, "2/25"},
+    {"Rajat Patidar", 42, 1111, 9, 1, 30.86, 112, 0, 0.0, "-"},
+    {"Devdutt Padikkal", 74, 1806, 11, 1, 25.44, 101, 0, 0.0, "-"},
+    {"Mayank Agarwal", 131, 2756, 13, 1, 22.97, 106, 0, 0.0, "-"},
+    {"Liam Livingstone", 49, 1051, 7, 0, 26.28, 94, 13, 9.02, "3/27"},
+    {"Krunal Pandya", 142, 1756, 2, 0, 22.23, 86, 93, 7.47, "4/45"},
+    {"Romario Shepherd", 18, 185, 1, 0, 26.43, 53, 10, 11.66, "2/14"},
+    {"Jacob Bethell", 2, 67, 1, 0, 33.50, 55, 0, 0.0, "-"},
+    {"Tim David", 50, 846, 1, 0, 32.54, 50, 0, 0.0, "-"},
+    {"Swapnil Singh", 14, 51, 0, 0, 10.20, 15, 7, 8.83, "2/28"},
+    {"Phil Salt", 34, 1056, 10, 0, 34.06, 89, 0, 0.0, "-"},
+    {"Jitesh Sharma", 55, 991, 1, 0, 25.41, 85, 0, 0.0, "-"},
+    {"Josh Hazlewood", 39, 19, 0, 0, 0.0, 7, 57, 8.28, "4/25"},
+    {"Bhuvneshwar Kumar", 190, 320, 0, 0, 8.21, 27, 198, 7.69, "5/19"},
+    {"Lungi Ngidi", 16, 0, 0, 0, 0.0, 0, 29, 8.53, "4/10"},
+    {"Suyash Sharma", 27, 0, 0, 0, 0.0, 0, 18, 8.75, "3/17"},
+    {"Yash Dayal", 43, 4, 0, 0, 1.33, 3, 41, 9.58, "3/20"}
+};
+
+struct stats CSK[18] = {
+    {"Ruturaj Gaikwad", 71, 2502, 20, 2, 40.35, 108, 0, 0.0, "-"},
+    {"Ayush Mhatre", 7, 240, 1, 0, 34.29, 94, 0, 0.0, "-"},
+    {"Dewald Brevis", 16, 455, 2, 0, 28.44, 57, 1, 16.00, "1/8"},
+    {"Rahul Tripathi", 100, 2291, 12, 0, 26.33, 93, 0, 12.0, "0/12"},
+    {"Shivam Dube", 79, 1859, 10, 0, 30.48, 95, 5, 10.31, "2/15"},
+    {"Sam Curran", 64, 997, 6, 0, 24.93, 88, 29, 9.74, "4/11"},
+    {"Rachin Ravindra", 18, 413, 2, 0, 24.29, 65, 0, 3.5, "0/3"},
+    {"Deepak Hooda", 125, 1496, 8, 0, 17.6, 64, 10, 8.64, "2/16"},
+    {"Ravindra Jadeja", 254, 3260, 5, 0, 27.86, 77, 170, 7.67, "5/16"},
+    {"Ravichandran Ashwin", 221, 833, 1, 0, 13.02, 50, 187, 7.2, "4/34"},
+    {"Vijay Shankar", 78, 1233, 7, 0, 26.23, 69, 9, 8.67, "2/19"},
+    {"Mahendra Singh Dhoni", 278, 5439, 24, 0, 38.3, 84, 0, 0.0, "-"},
+    {"Devon Conway", 29, 1080, 11, 0, 43.2, 92, 0, 0.0, "-"},
+    {"Noor Ahmed", 37, 20, 0, 0, 2.5, 7, 48, 8.08, "4/18"},
+    {"Khaleel Ahmed", 71, 2, 0, 0, 0.0, 1, 89, 8.98, "3/21"},
+    {"Matheesha Pathirana", 32, 0, 0, 0, 0.0, 0, 47, 8.68, "4/28"},
+    {"Nathan Ellis", 17, 19, 0, 0, 4.75, 12, 19, 8.66, "4/30"},
+    {"Shreyas Gopal", 52, 180, 0, 0, 12.86, 24, 52, 8.17, "4/16"} 
+    };
+struct stats MI[16] = {
+    {"Rohit Sharma", 272, 7046, 47, 2, 29.73, 109, 15, 7.49, "4/6"},
+    {"Surya Kumar Yadav", 166, 4311, 29, 2, 35.34, 103, 0, 8.00, "0/8"},
+    {"Tilak Verma", 54, 1499, 8, 0, 37.48, 84, 0, 7.64, "0/6"},
+    {"Naman Dhir", 23, 392, 1, 0, 28.00, 62, 0, 8.77, "0/13"},
+    {"Hardik Pandya", 152, 2749, 10, 0, 28.34, 91, 78, 9.18, "5/36"},
+    {"Mitchell Santner", 31, 110, 0, 0, 13.75, 22, 25, 7.31, "3/11"},
+    {"Will Jacks", 21, 463, 2, 1, 27.24, 100, 8, 9.57, "2/14"},
+    {"Arjun Tendulkar", 5, 13, 0, 0, 13.00, 13, 3, 9.37, "1/9"},
+    {"Ryan Rickelton", 14, 388, 3, 0, 29.85, 62, 0, 0.00, "-"},
+    {"Jonny Bairstow", 52, 1674, 9, 2, 34.88, 114, 0, 0.00, "-"},
+    {"Jasprit Bumrah", 145, 69, 0, 0, 9.86, 16, 183, 7.25, "5/10"},
+    {"Trent Boult", 120, 85, 0, 0, 9.44, 17, 143, 8.38, "4/18"},
+    {"Deepak Chahar", 95, 117, 0, 0, 14.63, 39, 88, 8.14, "4/13"},
+    {"Mujeeb Ur Rahman", 20, 12, 0, 0, 4.00, 10, 20, 8.34, "3/27"},
+    {"Reece Topley", 6, 3, 0, 0, 0.00, 3, 5, 11.10, "2/27"},
+    {"Karn Sharma", 90, 351, 0, 0, 14.04, 39, 83, 8.38, "4/16"} 
+};
+struct stats KKR[17] = {
+    {"Rinku Singh", 59, 1099, 4, 0, 30.53, 67, 0, 0.0, "-"},
+    {"Ajinkya Rahane", 198, 5032, 33, 2, 30.50, 105, 1, 5.00, "1/5"},
+    {"Manish Pandey", 174, 3942, 22, 1, 29.42, 114, 0, 0.00, "-"},
+    {"Rovwan Powell", 29, 365, 1, 0, 18.25, 67, 1, 11.67, "1/18"},
+    {"Angkrish Raghuvanshi", 22, 463, 2, 0, 28.94, 54, 0, 0.00, "-"},
+    {"Andre Russell", 140, 2651, 12, 0, 28.20, 88, 123, 9.51, "5/15"},
+    {"Sunil Narine", 189, 1780, 7, 1, 17.62, 109, 192, 6.80, "5/19"},
+    {"Venktesh Iyer", 62, 1468, 12, 1, 29.96, 104, 3, 10.59, "2/29"},
+    {"Ramandeep Singh", 31, 217, 0, 0, 19.73, 35, 6, 9.45, "3/20"},
+    {"Moeen Ali", 73, 1167, 6, 0, 22.02, 93, 41, 7.23, "4/26"},
+    {"Quinton De Kock", 115, 3309, 24, 2, 30.64, 140, 0, 0.00, "-"},
+    {"Rahmanullah Gurbaz", 19, 363, 2, 0, 21.35, 81, 0, 0.0, "-"},
+    {"Varun Chakravarthy", 84, 26, 0, 0, 6.50, 10, 100, 7.58, "5/20"},
+    {"Harshit Rana", 34, 59, 0, 0, 9.83, 34, 40, 9.51, "3/24"},
+    {"Vaibhav Arora", 32, 9, 0, 0, 2.25, 2, 36, 9.55, "3/27"},
+    {"Anrich Nortje", 48, 49, 0, 0, 8.17, 23, 61, 9.07, "3/33"},
+    {"Mayank Markande", 37, 48, 0, 0, 16.00, 18, 37, 8.91, "4/15"},
+    };
+    struct stats SRH[16] = {
+    {"Travis Head", 38, 1146, 8, 1, 34.73, 102, 2, 11.69, "2/30"},
+    {"Abhinav Manohar", 27, 292, 0, 0, 15.37, 43, 0, 0.00, "-"},
+    {"Atharv Taide", 10, 260, 2, 0, 26.00, 66, 0, 24.00, "0/4"},
+    {"Aniket Verma", 14, 236, 1, 0, 26.22, 74, 0, 0.00, "-"},
+    {"Sachin Baby", 19, 144, 0, 0, 14.40, 33, 2, 4.80, "2/4"},
+    {"Nitish Kumar Reddy", 28, 485, 2, 0, 28.53, 76, 5, 10.96, "2/17"},
+    {"Abhishek Verma", 77, 1816, 9, 1, 27.10, 141, 11, 8.95, "2/24"},
+    {"Henrich Klassen", 48, 1480, 7, 2, 40.00, 105, 0, 0.00, "-"},
+    {"Ishan Kishan", 119, 2998, 17, 1, 29.11, 106, 0, 0.00, "-"},
+    {"Pat Cummins", 72, 612, 3, 0, 20.40, 66, 79, 8.81, "4/34"},
+    {"Mohammad Shami", 119, 84, 0, 0, 6.00, 21, 133, 8.63, "4/11"},
+    {"Rahul Chahar", 79, 129, 0, 0, 8.06, 25, 75, 7.72, "4/27"},
+    {"Simarjeet Singh", 14, 10, 0, 0, 3.33, 3, 11, 10.00, "3/26"},
+    {"Harshal Patel", 118, 270, 0, 0, 9.31, 36, 151, 8.86, "5/27"},
+    {"Jaydev Unadkat", 112, 197, 0, 0, 12.31, 26, 110, 8.88, "5/25"},
+    {"Eshan Malinga", 7, 0, 0, 0, 0.00, 0, 13, 8.93, "3/31"} 
+};
+struct stats RR[15] = {
+    {"Yashasvi Jaiswal", 67, 2166, 15, 2, 34.38, 124, 0, 36.00, "-"},
+    {"Shimron Hetmyer", 86, 1483, 5, 0, 29.08, 75, 0, 0.00, "-"},
+    {"Vaibhav Suryavanshi", 7, 252, 1, 1, 36.00, 101, 0, 0.00, "-"},
+    {"Riyan Parag", 84, 1566, 7, 0, 26.10, 95, 7, 9.70, "1/10"},
+    {"Nitish Rana", 118, 2853, 20, 0, 27.97, 87, 10, 8.44, "2/11"},
+    {"Wanindu Hasranga", 37, 81, 0, 0, 5.40, 18, 46, 8.41, "5/18"},
+    {"Sanju Samson", 177, 4704, 26, 3, 30.95, 119, 0, 0.00, "-"},
+    {"Dhruv Jurel", 42, 680, 4, 0, 28.33, 70, 0, 0.00, "-"},
+    {"Jofra Archer", 52, 262, 0, 0, 13.79, 30, 59, 7.89, "3/15"},
+    {"Maheesh Theekshana", 38, 17, 0, 0, 5.67, 7, 36, 8.27, "4/33"},
+    {"Sandeep Sharma", 137, 60, 0, 0, 10.00, 9, 146, 8.03, "5/18"},
+    {"Akash Madhwal", 17, 8, 0, 0, 0.00, 4, 23, 10.06, "5/5"},
+    {"Nandre Burger", 6, 0, 0, 0, 0.00, 0, 7, 8.53, "2/29"},
+    {"Fazalhaq Farooqi", 12, 5, 0, 0, 0.00, 2, 6, 10.32, "2/32"},
+    {"Kwena Maphaka", 4, 8, 0, 0, 0.00, 8, 2, 13.00, "1/23"},
+};
+void PlayerStats(struct stats n){
+    printf("\n----------PLAYER STATS----------\n");
+    printf("Name                 : %s\n", n.name);
+    printf("Matches              : %d\n", n.matches);
+    printf("Runs                 : %d\n", n.runs);
+    printf("Fifties              : %d\n", n.fifties);
+    printf("Centuries            : %d\n", n.centuries);
+    printf("Average              : %.2f\n", n.avg);
+    printf("Highest Score        : %d\n", n.highest);
+    printf("Wickets              : %d\n", n.wickets);
+    printf("Economy              : %.2f\n", n.economy);
+    printf("Best Bowling Figures : %s\n", n.bestbowl);
+} 
+
+
+ int main(){
+    printf("Select any 4 different teams out of these 6 teams:-\n\n");
+    printf("1. RCB\n");
+    printf("2. CSK\n");
+    printf("3. MI\n");
+    printf("4. KKR\n");
+    printf("5. SRH\n");
+    printf("6. RR\n");
+    
+    char *teams[]={"", "RCB", "CSK", "MI", "KKR", "SRH", "RR"};
+    char *stadium[]={"", "M.Chinnaswamy Stadium (RCB)" , "M.A.Chidambaram Stadium (CSK)" , "Wankhede Stadium (MI)" , "Eden Gardens (KKR)" , "Rajiv Gandhi Int. Stadium (SRH)" , "Sawai Mansigh Stadium (RR)"};
+    char *pitch[]={"" , "Batting Friendly" , "Slow and Spin Friendly" , "Hard and Batting Friendly" , "Spin Fiendly" , "Batting Flat Track" , "Bouncy and Pace"};
+    int front[]={0, 65 , 66 , 70 , 77 , 70 , 72};
+    int square[]={0, 60 , 69 , 66 , 67 , 68 , 67};
+    int avg[]={0, 185 , 160 , 175 , 165 , 180 , 155};
+    int highest[]={0, 287 , 246 , 235 , 262 , 286 , 219};
+    int seats[]={0, 40000 , 38200 , 33100 , 68000 , 39200 , 30000};
+    int points[]={0, 0, 0, 0, 0, 0, 0};
+    int mplayed[]={0, 0, 0, 0, 0, 0, 0};
+    int mwon[]={0, 0, 0, 0, 0, 0, 0};
+    int mlost[]={0, 0, 0, 0, 0, 0, 0};
+    
+    int i, j;
+    int arr[4];
+    for(i=0; i<4; i++){
+        printf("\nEnter number of selected team %d: ", i+1);
+        scanf("%d", &arr[i]);
+        if(arr[i]<1||arr[i]>6){
+        printf("\nInvalid Input: Please select from above listed teams only");
+        return 0;
+        }
+    }
+    for(i=0; i<4; i++){
+        for(j=i+1; j<4; j++){
+            if(arr[i]==arr[j]){
+                printf("\n ******Please Select Different Teams******");
+            return 0;
+            }
+        }
+    }
+    printf("\nSelected teams are:-\n\n");
+    for(i=0; i<4; i++){
+        printf("%d. %s\n", i+1, *(teams+arr[i]));
+    }
+    printf("\n\n");
+    int match_number = 0;
+    while(1) {
+    printf("\n---------------MINI IPL---------------\n\n");
+    int n;
+    printf("1. Fixtures\n2. Squads and Stats\n3. Venues\n4. SIMULATE\n5. Points Table\n6. EXIT");
+    printf("\n\nEnter the designation of what you want to see: ");
+    scanf("%d", &n);
+   
+    switch(n){
+        case 1:
+        printf("\n---------------FIXTURES---------------\n\n");
+        printf("Match 1: %s vs %s at %s\n", teams[arr[0]], teams[arr[1]], stadium[arr[1]]);
+        printf("Match 2: %s vs %s at %s\n", teams[arr[2]], teams[arr[3]], stadium[arr[2]]);
+        printf("Match 3: %s vs %s at %s\n", teams[arr[0]], teams[arr[2]], stadium[arr[0]]);
+        printf("Match 4: %s vs %s at %s\n", teams[arr[1]], teams[arr[3]], stadium[arr[1]]);
+        printf("Match 5: %s vs %s at %s\n", teams[arr[0]], teams[arr[3]], stadium[arr[3]]);
+        printf("Match 6: %s vs %s at %s\n", teams[arr[1]], teams[arr[2]], stadium[arr[1]]);
+        printf("Match 7: %s vs %s at %s\n", teams[arr[1]], teams[arr[0]], stadium[arr[0]]);
+        printf("Match 8: %s vs %s at %s\n", teams[arr[3]], teams[arr[2]], stadium[arr[3]]);
+        printf("Match 9: %s vs %s at %s\n", teams[arr[2]], teams[arr[0]], stadium[arr[2]]);
+        printf("Match 10: %s vs %s at %s\n", teams[arr[3]], teams[arr[1]], stadium[arr[3]]);
+        printf("Match 11: %s vs %s at %s\n", teams[arr[3]], teams[arr[0]], stadium[arr[0]]);
+        printf("Match 12: %s vs %s at %s\n", teams[arr[2]], teams[arr[1]], stadium[arr[2]]);
+        break;
+        case 2:
+        printf("\n---------------SQUAD AND STATS---------------\n\n");
+        for(i=0; i<4; i++){
+            printf("%d. %s\n", i+1, teams[arr[i]]);
+        }
+        int x;
+        printf("\nEnter the team number to know its squad: ");
+        scanf("%d" ,&x);
+        printf("\n\n");
+        
+        Squads(arr[x-1]);
+        
+        int loop = 1;
+        while(loop) {
+        int num;
+        printf("\nEnter the players number to know its stats: ");
+        scanf("%d", &num);
+        
+        if(num < 1 || num > 18) {
+            printf("Invalid Player Number");
+     } else {
+       int team = arr[x-1];
+
+        switch(team) {
+             case 1:
+              PlayerStats(RCB[num-1]);
+              break;
+
+             case 2:
+              PlayerStats(CSK[num-1]);
+              break;
+
+             case 3:
+              PlayerStats(MI[num-1]);
+              break;
+
+             case 4:
+              PlayerStats(KKR[num-1]);
+              break;
+
+             case 5:
+              PlayerStats(SRH[num-1]);
+              break;
+
+             case 6:
+              PlayerStats(RR[num-1]);
+              break;
+    }
+    printf("\nDo you want to see stat of another player (1-Yes, 0-No): ");
+    scanf("%d", &loop);
+  }
+}
+        break;
+        case 3:
+        printf("\n---------------VENUES---------------\n\n");
+        
+        for(i=0; i<4; i++){
+            int teamnumber = arr[i];
+            printf("%d. %s\n", i+1, stadium[teamnumber]);
+        }
+        int p;
+        printf("\nEnter the Stadium number to know about its STATS: ");
+        scanf("%d", &p);
+               printf("\n---------------STADIUM STATS---------------\n");
+        int t = arr[p-1];  
+
+        printf("\n");
+        printf("---------------------------------------------------------\n");
+        printf("| %-20s | %-30s |\n", "Field", "Stats");
+        printf("---------------------------------------------------------\n");
+        printf("| %-20s | %-30s |\n", "Stadium Name", stadium[t]);
+        printf("| %-20s | %-30s |\n", "Pitch Condition", pitch[t]);
+        printf("| %-20s | %-30d |\n", "Front Boundary", front[t]);
+        printf("| %-20s | %-30d |\n", "Side Boundary", square[t]);
+        printf("| %-20s | %-30d |\n", "Average T20 Score", avg[t]);
+        printf("| %-20s | %-30d |\n", "Highest T20 Score", highest[t]);
+        printf("| %-20s | %-30d |\n", "Seating Capacity", seats[t]);
+        printf("---------------------------------------------------------------\n");
+        break;
+        case 4:
+        int team1[]={arr[0], arr[2], arr[0], arr[1], arr[0], arr[1], arr[1], arr[3], arr[2], arr[3], arr[3], arr[2]};
+    int team2[]={arr[1], arr[3], arr[2], arr[3], arr[3], arr[2], arr[0], arr[2], arr[0], arr[1], arr[0], arr[1]};
+   
+        if(match_number >= 12) {
+        printf("\nAll matches have been simulated!\n");
+        break;
+    }
+
+    while(1) {
+        int t1 = team1[match_number];
+        int t2 = team2[match_number];
+
+        printf("\n------------------------------------------\n");
+        printf("Match %d: %s vs %s\n", match_number + 1, teams[t1], teams[t2]);
+        printf("------------------------------------------\n");
+
+        int winner;
+        printf("Enter the WINNER (1 for %s, 2 for %s): ", teams[t1], teams[t2]);
+        scanf("%d", &winner);
+
+        mplayed[t1]++, mplayed[t2]++;
+
+        if(winner == 1) {
+            points[t1] += 2;
+            mwon[t1]++;
+            mlost[t2]++;
+        }
+        else if(winner == 2) {
+            points[t2] += 2;
+            mwon[t2]++;
+            mlost[t1]++;
+        }
+        else {
+            printf("Invalid input! Try again.\n");
+            continue; 
+        }
+
+        match_number++;
+        
+        int nxt;
+        printf("Do you want to simulate the next match? (1 to 9-Yes, 0-No): ");
+        scanf("%d", &nxt);
+
+        if(nxt == 0)
+         break;
+         
+         if(match_number>=12){
+             printf("ALL MATCHES COMPLETED!!!!!!!\n\n");
+             int winner_team = arr[0];
+             int max_points = points[arr[0]];
+             for(i=0; i<4; i++){
+                 if(points[arr[i]]>max_points){
+                     max_points = points[arr[i]];
+                     winner_team = arr[i];
+                 }
+             }
+         printf("🏆🏆🏆WINNER OF MINI IPL IS TEAM🏆🏆🏆    🏆🏆🏆%s🏆🏆🏆", teams[winner_team]);
+         break;
+        }
+    
+    }
+         break;
+         case 5:
+         printf("\n---------------POINTS TABLE---------------\n");
+         printf("TEAMS\tMATCHES PLAYED\t\tMATCHES WON\t\tMATCHES LOST\t POINTS\n");
+         
+         for(i=0; i<=4; i++){
+             printf("%s\t\t\t\t%d\t\t\t\t%d\t\t\t\t%d\t\t\t\t%d\n\n", teams[arr[i]], mplayed[arr[i]], mwon[arr[i]], mlost[arr[i]], points[arr[i]]);
+         }
+         break;
+        case 6:
+        printf("Exiting the program........\n\n");
+        printf("                             THANK YOU         ");
+        return 0;
+        default:
+        return 0;
+    }
+    }
+}
+
+
+    
+    
